@@ -5,6 +5,9 @@ import Routes from "./navigation/Routes";
 
 
 
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['componentWillReceiveProps']); // Ignore log notification by message
+//LogBox.ignoreAllLogs();
  function App() {
   return (
     <View style={{flex: 1}}>
@@ -12,5 +15,8 @@ import Routes from "./navigation/Routes";
     </View>
     
   );
-}
+
+ 
+    
+   };
 export default App;
