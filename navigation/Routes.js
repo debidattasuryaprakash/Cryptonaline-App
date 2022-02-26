@@ -9,6 +9,8 @@ import { useRef } from 'react';
 import Searchbar from '../search-bar/Searchbar';
 import Stories from '../stories/Stories';
 import stories from '../stories/Stories';
+import Carousel from '../cardCarousel/CarouselCards'
+import CarouselCards from '../cardCarousel/CarouselCards';
 
 
 const Tab = createBottomTabNavigator();
@@ -16,7 +18,7 @@ const Tab = createBottomTabNavigator();
 function HomeScreen() {
   return (
     <SafeAreaView style={{flex:1,flexDirection:'column',justifyContent:'space-evenly'}}>
-      <View style={{ flex:0.3,flexDirection:'row',justifyContent:'space-evenly' ,alignItems:'center',paddingLeft:0}}>
+      <View style={{ flex:0.6,flexDirection:'row',justifyContent:'space-evenly' ,alignItems:'center',paddingLeft:0}}>
       <Searchbar />
       <Image style={{borderColor:'#11bbcc',borderWidth:2,borderRadius:50,bottom:-4,height:40,width:40}}
       source={imagePath.icProfile}
@@ -35,7 +37,7 @@ function HomeScreen() {
     borderRadius:50,
     width:300,
     alignSelf:'center',
-    top:10,
+    top:0,
     
 
     
@@ -43,13 +45,16 @@ function HomeScreen() {
 />
        
     </View>
+    <View style={{flexDirection:'column',flex:1,alignItems:'center',top:-50}} ><CarouselCards/></View>
     
   
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' ,top:-80}}>
 
         <Text>Home Screen</Text>
 
-      </View></SafeAreaView>
+      </View> 
+      
+      </SafeAreaView>
   );
 }
 function News() {
@@ -109,16 +114,16 @@ function Box() {
              paddingHorizontal: 20,
              height: 60,
              //borderRadius: 50,
-            shadowColor: "red",
+            shadowColor: "#000",
             shadowOffset: {
 	            width: 100,
-	            height: -24,
-              marginTop:100
+	            height: -50,
+             
             },
             shadowOpacity: 1,
-            shadowRadius: 100.00,
+            shadowRadius: 50.00,
 
-            elevation: 50,
+            elevation: 7,
              
            }
          }}>
@@ -207,7 +212,6 @@ function Box() {
                    tintColor: focused ? '#11bbcc' : '#a8a8a8'
                  }}
                    source={imagePath.icBox} /><Image style={{
-                     tintColor: focused ? '#11bbcc' : 'white',
                      width: focused ? 5:0,
                      bottom: -5
                    }}

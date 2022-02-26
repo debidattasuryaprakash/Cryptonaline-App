@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import InstaStory from 'react-native-insta-story';
+import Story from './src/Story';
 
 const data = [
     {
@@ -122,13 +122,16 @@ const data = [
 const stories = () => {
   return (
     <View>
-      <InstaStory data={data}
+      <Story data={data}
+            
             avatarSize={80}
-            unPressedBorderColor={'#11bbcc'}
+            
+            pressedBorderColor={'transparent'}
+            unPressedBorderColor={'transparent'}
             showAvatarText={false}
             duration={10}
-            onStart={item => console.log(item)}
-            onClose={item => console.log('close: ', item)}
+            //onStart={item => console.log(item)}
+            //onClose={item => console.log('close: ', item)}
             customSwipeUpComponent={<View>
                                 <Text>Swipe</Text>
                             </View>}
