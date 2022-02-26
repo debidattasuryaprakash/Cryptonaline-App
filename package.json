@@ -10,9 +10,15 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/vector-icons": "^12.0.5",
+    "@fortawesome/fontawesome-svg-core": "^1.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.0.0",
+    "@fortawesome/react-native-fontawesome": "^0.2.7",
+    "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.2.0",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.5.0",
+    "@types/react-native": "^0.66.16",
     "expo": "~44.0.0",
     "expo-status-bar": "~1.2.0",
     "lodash": "^4.17.21",
@@ -21,14 +27,23 @@
     "react-native": "^0.64.3",
     "react-native-base": "^1.1.0",
     "react-native-drop-shadow": "^0.0.4",
+    "react-native-gesture-handler": "~2.1.0",
+    "react-native-imaged-carousel-card": "^0.1.1",
     "react-native-insta-story": "^1.1.7",
-    "react-native-safe-area-context": "3.3.2",
+    "react-native-paper": "^4.11.2",
+    "react-native-reanimated": "~2.3.1",
+    "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "~3.10.1",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-svg": "^12.1.1",
     "react-native-thumbnail": "^1.1.3",
-    "react-native-web": "0.17.1"
+    "react-native-web": "^0.17.1",
+    "rn-sliding-up-panel": "^2.4.5",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "typescript": "~4.3.5"
   },
   "private": true
 }
