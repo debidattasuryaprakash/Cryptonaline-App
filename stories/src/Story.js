@@ -1,9 +1,9 @@
 import React, {Fragment, useRef, useState, useEffect} from "react";
 import {Dimensions, View, Platform} from "react-native";
-import Modal from "react-native-modalbox";
 import StoryListItem from "./StoryListItem";
 import StoryCircleListView from "./StoryCircleListView";
 import {isNullOrWhitespace} from "./helpers/ValidationHelpers";
+import Modal from "react-native-modalbox";
 import type {IUserStory} from "./interfaces/IUserStory";
 import AndroidCubeEffect from "./components/AndroidCubeEffect";
 import CubeNavigationHorizontal from "./components/CubeNavigationHorizontal";

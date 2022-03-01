@@ -1,60 +1,74 @@
 import React from 'react';
-import {  SafeAreaView,StyleSheet, Text, View } from 'react-native';
+import {  SafeAreaView,ScrollView,StyleSheet, Text, View,Dimensions,TouchableOpacity,Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Image } from 'react-native';
 import imagePath from './imagePath';
 import { useRef } from 'react';
 import Searchbar from '../search-bar/Searchbar';
 import Stories from '../stories/Stories';
-import stories from '../stories/Stories';
-import Carousel from '../cardCarousel/CarouselCards'
 import CarouselCards from '../cardCarousel/CarouselCards';
+import Watchlist from '../watchlist/watchhlist';
+import Viewall from '../watchlist/Viewall';
+import Profile from '../profile/Profile';
+import {useNavigation} from '@react-navigation/native';
+import Editprofile from '../profile/EditProfile';
+import Faq from '../profile/faq';
+import Termsncondition from '../profile/termsncondition';
+import Profilephoto from '../profile/profilephoto';
 
 
-const Tab = createBottomTabNavigator();
+
+
 
 function HomeScreen() {
+   const navigation = useNavigation();
+  const screenHeight = Dimensions.get('window').height;
   return (
-    <SafeAreaView style={{flex:1,flexDirection:'column',justifyContent:'space-evenly'}}>
-      <View style={{ flex:0.6,flexDirection:'row',justifyContent:'space-evenly' ,alignItems:'center',paddingLeft:0}}>
+    
+    <>
+      {/* <View style={{flex:1, Height: "auto", maxHeight: screenHeight}}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{margin:0}} contentContainerStyle={{flexGrow:1}} >    */}
+       
+       <View style={{ flexDirection:'row',justifyContent:'space-evenly' ,alignItems:'center',paddingLeft:0,paddingTop:50}}>
       <Searchbar />
+      <TouchableOpacity activeOpacity={1} onPress={() =>
+                  navigation.push('Profile')}>
       <Image style={{borderColor:'#11bbcc',borderWidth:2,borderRadius:50,bottom:-4,height:40,width:40}}
       source={imagePath.icProfile}
       
-      />
-
-      
-    </View>
+      /></TouchableOpacity></View>
     
-    <View style={{flexDirection:'column',top:-70,left:-5}}> 
+    <View style={{flexDirection:'column',paddingTop:10,left:-5,top:-20}}> 
       <Stories/>
-      <View
-  style={{
-    borderBottomColor: '#ACA9A9',
-    borderBottomWidth: 0.4,
-    borderRadius:50,
-    width:300,
-    alignSelf:'center',
-    top:0,
+      <View style={{
+              borderBottomColor: '#ACA9A9',
+              borderBottomWidth: 0.4,
+              borderRadius:50,
+              width:300,
+              alignSelf:'center',
+              top:10,
+              left:7,
+              }} />
+     
+     </View>
+    <View style={{flexDirection:'column',flex:1,alignItems:'center',top:30}} ><CarouselCards/></View>
     
-
-    
-  }}
-/>
-       
-    </View>
-    <View style={{flexDirection:'column',flex:1,alignItems:'center',top:-50}} ><CarouselCards/></View>
-    
-  
-     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' ,top:-80}}>
+    {/* <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' ,top:-80}}>
 
         <Text>Home Screen</Text>
 
-      </View> 
+      </View>  */}
+      <View style={{top:-150}}>
+      <Watchlist></Watchlist></View>
       
-      </SafeAreaView>
+      {/* <View style={{ flex: 2,top:0}}>
+      <Interestroute></Interestroute></View>  */}
+      
+      {/* </ScrollView>  
+       </View>  */}
+       </>
+      
   );
 }
 function News() {
@@ -86,10 +100,15 @@ function Box() {
   );
 }
 
+const Routes = () => {
+  const Stack = createNativeStackNavigator();
 
- function Routes() {
+  const Tab = createBottomTabNavigator();
+
+  const BottomTabScreen = () => {
+
    return (
-     <NavigationContainer >
+     
          <Tab.Navigator initialRouteName="Home" screenOptions={{
            headerShown: false,
            tabBarShowLabel: false,
@@ -121,9 +140,10 @@ function Box() {
              
             },
             shadowOpacity: 1,
-            shadowRadius: 50.00,
+            shadowRadius: 100.00,
 
-            elevation: 7,
+            elevation: 27,
+            borderTopWidth:-100,
              
            }
          }}>
@@ -223,9 +243,28 @@ function Box() {
            }} />
          </Tab.Navigator>
 
-       </NavigationContainer>
+       
   );
-}
+ 
+};
+return (
+    <NavigationContainer >
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Bottom" component={BottomTabScreen} />
+        <Stack.Screen name="Viewall" component={Viewall} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Editprofile" component={Editprofile} />
+        <Stack.Screen name="Faq" component={Faq} />
+        <Stack.Screen name="Termsncondition" component={Termsncondition} />
+        <Stack.Screen name="Profilephoto" component={Profilephoto} />
+        
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
 
 

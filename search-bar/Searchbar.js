@@ -1,4 +1,3 @@
-import Icon from 'react-native-vector-icons/Ionicons';
 import {StyleSheet, TextInput, Text, View, TouchableOpacity, ActivityIndicator} from 'react-native';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -60,9 +59,9 @@ const styles = StyleSheet.create({
               height: 10,
             },
             shadowOpacity: 1,
-            shadowRadius: 50.0,
+            shadowRadius: 5.0,
 
-            elevation: 24,
+            elevation: 7,
         // background color must be set
          // invisible color
           
