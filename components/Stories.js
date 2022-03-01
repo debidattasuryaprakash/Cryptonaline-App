@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import Story from './src/Story';
+// import Story from './src/Story';
 
 const data = [
     {
@@ -122,7 +122,7 @@ const data = [
 const stories = () => {
   return (
     <View>
-      <Story data={data}
+      {/* <Story data={data}
             
             avatarSize={80}
             
@@ -135,7 +135,7 @@ const stories = () => {
             customSwipeUpComponent={<View>
                                 <Text>Swipe</Text>
                             </View>}
-            style={{marginTop: 30}}/>
+            style={{marginTop: 30}}/> */}
     </View>
   )
 }
