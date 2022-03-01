@@ -2,14 +2,13 @@ import {StyleSheet, TextInput, Text, View, TouchableOpacity, ActivityIndicator} 
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Image } from 'react-native';
-import imagepath from './imagepath';
+
 
 const Searchbar = (props) => {
-    props.
     return (
         <View style={styles.searchBarContainer}>
             <Image style={{marginLeft: '3%'}}
-                 source={imagepath.icSearch} />
+                 source={require("../assets/searchIcon.png")} />
             <TextInput style={styles.searchBar} onChangeText={props.onChangeText} value={props.value}
                        placeholder={props.placeholder ?
                            props.placeholder : 'search by coin,article,nfts.... '}/>

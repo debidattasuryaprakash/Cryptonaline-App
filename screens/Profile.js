@@ -1,32 +1,30 @@
 import { View, Text , Image,TouchableOpacity,StyleSheet,Dimensions} from 'react-native';
 import React from 'react';
-import imagepath from './imagePath';
 import {useNavigation} from '@react-navigation/native';
-import EditProfile from './EditProfile';
-import * as Font from 'expo-font';
 import { Ionicons } from "@expo/vector-icons";
+import styles from '../styles/Profile.style';
 
 
 export const SLIDER_WIDTH = Dimensions.get('window').width + 5
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 
-const profile = () => {
+const Profile = () => {
     const navigation = useNavigation();
   return (
     <><View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 20, paddingRight: 20, paddingTop: 50 }}>
-          <TouchableOpacity activeOpacity={1} onPress={() => navigation.push('Bottom')}>
+          <TouchableOpacity activeOpacity={1} onPress={() => navigation.push('Appbar')}>
               <Image
-                  source={imagepath.icBack} /></TouchableOpacity>
+                  source={require("../assets/profileImage/back.png")} /></TouchableOpacity>
           <TouchableOpacity activeOpacity={1} onPress={() => navigation.push('Editprofile')}>
               <Image
-                  source={imagepath.icEdit} /></TouchableOpacity>
+                  source={require("../assets/profileImage/edit.png")} /></TouchableOpacity>
       </View>
       <View style={{flex:1,flexDirection:'row',justifyContent:'center',paddingLeft: 20, paddingRight: 20,top:-30}}>
           <View style={styles.profilecontainer}>
           <TouchableOpacity activeOpacity={1} onPress={() =>
                   navigation.push('Profilephoto')}>
               <Image style={{ borderColor: '#DF71A0', borderWidth: 6, borderRadius: 100, height: 150, width: 150}}
-                  source={imagepath.icProfile} /></TouchableOpacity></View>
+                  source={require("../assets/profileImage/profile.png")} /></TouchableOpacity></View>
       </View> 
       <View style={{flex:1,flexDirection:'column',justifyContent:'center',paddingLeft: 20, paddingRight: 20,top:-40,alignContent:'center',alignItems:'center',fontSize:35}}>
           <Text style={{fontSize:35,color:'#383838',fontWeight:'700'}}>jenna d,soz</Text>
@@ -112,67 +110,5 @@ const profile = () => {
   )
 }
 
-const styles = StyleSheet.create({
 
-  container: {
-    backgroundColor: 'white',
-    borderRadius: 10,
-    width: 75.6375,
-    height:77.115,
-    paddingBottom: 40,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.29,
-    shadowRadius: 4.65,
-    elevation: 7,
-  },
-    interestcontainer: {
-    backgroundColor: '#FAE8F0',
-    borderRadius: 25.064099999999996,
-    width: 85.6375,
-    height:25.845,
-    alignContent:'center',
-    alignItems:'center', 
-  },
-  bottomcontainer: {
-    backgroundColor: 'white',
-    borderRadius: 10,
-    width: ITEM_WIDTH,
-    height:99.5625,
-    paddingBottom: 40,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.29,
-    shadowRadius: 4.65,
-    elevation: 7,
-  },
-      profilecontainer: {
-        borderWidth: 6,
-        justifyContent: "center",
-        alignItems: "center",
-        alignSelf: "center",
-        borderColor: '#df71a0',
-        borderRadius: 100,
-        height: 150,
-        width: 150,
-        
-         shadowColor: 'red',
-            shadowOffset: {
-              width: 100,
-              height: 100,
-            },
-            shadowOpacity: 0.1,
-            shadowRadius: 100.0,
-
-            elevation: 24
-        }
-
-})
-
-export default profile
+export default Profile

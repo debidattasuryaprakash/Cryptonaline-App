@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const faq = () => {
+const Faq = () => {
   return (
     <View style={{flex:1,alignContent:'center',alignItems:'center',justifyContent:'center'}}>
       <Text>faq</Text>
@@ -9,4 +9,4 @@ const faq = () => {
   )
 }
 
-export default faq
+export default Faq

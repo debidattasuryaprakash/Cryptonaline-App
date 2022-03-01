@@ -1,11 +1,15 @@
-import { View, Text } from 'react-native'
+import { View, Text ,TouchableOpacity,Image,Dimensions} from 'react-native'
 import React from 'react'
+import  Searchbar  from '../components/Searchbar';
+import Stories from '../components/Stories';
+import Watchlist from '../components/Watchlist/Watchlist'
+import CarouselCards from '../components/Carousel/CarouselCards'
+import {useNavigation} from '@react-navigation/native';
 
-const homescreen = () => {
+const Homescreen = () => {
    const navigation = useNavigation();
-  const screenHeight = Dimensions.get('window').height;
+  //const screenHeight = Dimensions.get('window').height;
   return (
-    
     <>
       {/* <View style={{flex:1, Height: "auto", maxHeight: screenHeight}}>
         <ScrollView showsVerticalScrollIndicator={false} style={{margin:0}} contentContainerStyle={{flexGrow:1}} >    */}
@@ -15,7 +19,7 @@ const homescreen = () => {
       <TouchableOpacity activeOpacity={1} onPress={() =>
                   navigation.push('Profile')}>
       <Image style={{borderColor:'#11bbcc',borderWidth:2,borderRadius:50,bottom:-4,height:40,width:40}}
-      source={imagePath.icProfile}
+      source={require("../assets/profileImage/profile2.png")}
       
       /></TouchableOpacity></View>
     
@@ -52,4 +56,4 @@ const homescreen = () => {
   );
 }
 
-export default homescreen
+export default Homescreen

@@ -1,28 +1,17 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Routes from "./navigation/Appbar";
-import Viewall from './screens/viewall';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-
+import Stacks from "./routes/stacks";
 import { LogBox } from 'react-native';
+
 LogBox.ignoreLogs(['componentWillReceiveProps']); // Ignore log notification by message
-LogBox.ignoreAllLogs();
+//LogBox.ignoreAllLogs();
  function App() {
    
   return (
     <View style={{ flex: 1 }}>
-      <Routes />
-
+        <Stacks />
     </View>
-    
-    
   );
-
- 
-    
-   };
+};
 export default App;

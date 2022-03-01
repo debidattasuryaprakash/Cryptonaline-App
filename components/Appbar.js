@@ -1,22 +1,12 @@
 import React from 'react';
-import {  SafeAreaView,ScrollView,StyleSheet, Text, View,Dimensions,TouchableOpacity,Image } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {  Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import imagePath from './imagePath';
-import { useRef } from 'react';
-import Searchbar from '../search-bar/Searchbar';
-import Stories from './Stories';
-import CarouselCards from '../cardCarousel/CarouselCards';
-import Watchlist from './Watchlist/Watchlist';
-import Viewall from '../screens/viewall';
-import Profile from '../profile/Profile';
-import {useNavigation} from '@react-navigation/native';
-import Editprofile from '../profile/EditProfile';
-import Faq from '../profile/faq';
-import Termsncondition from '../profile/termsncondition';
-import Profilephoto from '../profile/profilephoto';
 import styles from '../styles/Appbar.style'
+import HomeScreen from '../screens/Homescreen';
+import News from '../screens/News';
+import Bookmark from '../screens/Bookmark';
+import Portfolio from '../screens/Portfolio';
+import Stats from '../screens/Stats'
 
 const Appbar = () => {
 const Tab = createBottomTabNavigator();
@@ -37,12 +27,12 @@ return (
                    bottom: 0,
                    tintColor: focused ? '#11bbcc' : '#a8a8a8'
                  }}
-                   source={imagePath.icHome} /><Image style={{
+                   source={require("../assets/navIcons/home.png")} /><Image style={{
                      tintColor: focused ? '#11bbcc' : 'white',
                      bottom: -5,
                      width: focused ? 5:0,
                    }}
-                     source={imagePath.icEc} /></>
+                     source={require("../assets/navIcons/Ellipse.png")} /></>
 
                );
              }
@@ -55,12 +45,12 @@ return (
                    bottom: 0,
                    tintColor: focused ? '#11bbcc' : '#a8a8a8'
                  }}
-                   source={imagePath.icNews} /><Image style={{
+                   source={require("../assets/navIcons/news.png")} /><Image style={{
                      tintColor: focused ? '#11bbcc' : 'white',
                      bottom: -5,
                      width: focused ? 5:0
                    }}
-                     source={imagePath.icEc} /></>
+                     source={require("../assets/navIcons/Ellipse.png")} /></>
 
 
                );
@@ -75,12 +65,12 @@ return (
                    bottom: 0,
                    tintColor: focused ? '#11bbcc' : '#a8a8a8'
                  }}
-                   source={imagePath.icStats} /><Image style={{
+                   source={require("../assets/navIcons/stats.png")} /><Image style={{
                      tintColor: focused ? '#11bbcc' : 'white',
                      bottom: -5,
                      width: focused ? 5:0,
                    }}
-                     source={imagePath.icEc} /></>
+                     source={require("../assets/navIcons/Ellipse.png")} /></>
 
                );
              }
@@ -93,19 +83,19 @@ return (
                    bottom: 0,
                    tintColor: focused ? '#11bbcc' : '#a8a8a8'
                  }}
-                   source={imagePath.icBookmark} />
+                   source={require("../assets/navIcons/bookmark.png")} />
                    <Image style={{
                      tintColor: focused ? '#11bbcc' : 'white',
                      bottom: -5,
                      width: focused ? 5:0
                    }}
-                     source={imagePath.icEc} />
+                     source={require("../assets/navIcons/Ellipse.png")} />
                  </>
 
                );
              }
            }} />
-           <Tab.Screen name="box" component={Box} options={{
+           <Tab.Screen name="Portfolio" component={Portfolio} options={{
              tabBarIcon: ({ focused }) => {
                return (
 
@@ -113,11 +103,11 @@ return (
                    bottom: 0,
                    tintColor: focused ? '#11bbcc' : '#a8a8a8'
                  }}
-                   source={imagePath.icBox} /><Image style={{
+                   source={require("../assets/navIcons/portfolio.png")} /><Image style={{
                      width: focused ? 5:0,
                      bottom: -5
                    }}
-                     source={imagePath.icEc} /></>
+                     source={require("../assets/navIcons/Ellipse.png")} /></>
 
 
                );

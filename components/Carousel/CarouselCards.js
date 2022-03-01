@@ -1,6 +1,6 @@
 import Carousel from 'react-native-snap-carousel'
 import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselCardItem'
-import data from './data'
+import Carouselcarddata from '../../lib/carouselData'
 import React from 'react'
 import { View } from "react-native"
 
@@ -16,7 +16,7 @@ const CarouselCards = () => {
         layout="default"
         layoutCardOffset={9}
         ref={isCarousel}
-        data={data}
+        data={Carouselcarddata}
         renderItem={CarouselCardItem}
         sliderWidth={SLIDER_WIDTH}
         itemWidth={ITEM_WIDTH}
