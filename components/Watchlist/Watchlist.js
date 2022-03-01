@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Dimensions, Image,Linking,TouchableOpacity,Butt
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Viewall from './Viewall';
+import Viewall from '../../screens/viewall';
 import {useNavigation} from '@react-navigation/native';
 import imagepath from './imagepath';
 
@@ -17,7 +17,7 @@ export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 
  
   //const [bookmarked, setBookmarked] = useState(false);
-const Watchlistitem = ({ item, index }) => {
+const Watchlist = ({ item, index }) => {
   const navigation = useNavigation();
  
   return (
@@ -134,4 +134,4 @@ const styles = StyleSheet.create({
    
   })
 
-export default Watchlistitem
+export default Watchlist

@@ -1,8 +1,8 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Routes from "./navigation/Routes";
-import Viewall from './watchlist/Viewall';
+import Routes from "./navigation/Appbar";
+import Viewall from './screens/viewall';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
