@@ -9,7 +9,7 @@ import Profile from '../screens/Profile'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Appbar from '../components/Appbar'
-import Status from '../components/story/status';
+import Status from '../components/story/Status';
 
 
 const stacks = () => {
@@ -27,8 +27,7 @@ const stacks = () => {
         <Stack.Screen name="Faq" component={Faq} />
         <Stack.Screen name="Termsncondition" component={Termsncondition} />
         <Stack.Screen name="Profilephoto" component={Profilephoto} />
-         <Stack.Screen name="Status" component={Status} />
-
+        <Stack.Screen name="Status" component={Status} />
         
       </Stack.Navigator>
     </NavigationContainer>

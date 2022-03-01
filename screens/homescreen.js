@@ -1,7 +1,7 @@
 import { View, Text ,TouchableOpacity,Image,Dimensions} from 'react-native'
 import React from 'react'
 import  Searchbar  from '../components/Searchbar';
-import Stories from '../components/story/stories';
+import Stories from '../components/story/Stories';
 import Watchlist from '../components/Watchlist/Watchlist'
 import CarouselCards from '../components/Carousel/CarouselCards'
 import {useNavigation} from '@react-navigation/native';
@@ -23,7 +23,7 @@ const Homescreen = () => {
       
       /></TouchableOpacity></View>
     
-    <View style={{flexDirection:'column',paddingTop:10,left:-5,top:-20}}> 
+    <View style={{flexDirection:'column',paddingTop:10,left:-5,top:-35}}> 
       <Stories/>
       <View style={{
               borderBottomColor: '#ACA9A9',
@@ -31,12 +31,12 @@ const Homescreen = () => {
               borderRadius:50,
               width:300,
               alignSelf:'center',
-              top:10,
+              top:-30,
               left:7,
               }} />
      
      </View>
-    <View style={{flexDirection:'column',flex:1,alignItems:'center',top:30}} ><CarouselCards/></View>
+    <View style={{flexDirection:'column',flex:1,alignItems:'center',top:-30}} ><CarouselCards/></View>
     
     {/* <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' ,top:-80}}>
 
