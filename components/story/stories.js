@@ -39,6 +39,7 @@ const Stories = () => {
         return (
           <TouchableOpacity
             key={index}
+            activeOpacity={1}
             onPress={() =>
               navigation.push('Status', {
                 name: data.name,
