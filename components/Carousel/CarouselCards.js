@@ -1,14 +1,12 @@
-import Carousel from 'react-native-snap-carousel'
-import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselCardItem'
-import Carouselcarddata from '../../lib/carouselData'
-import React from 'react'
-import { View } from "react-native"
-
+import Carousel from 'react-native-snap-carousel';
+import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselCardItem';
+import Carouselcarddata from '../../lib/carouselData';
+import React from 'react';
+import { View } from 'react-native';
 
 const CarouselCards = () => {
-  const [index, setIndex] = React.useState(0)
-  const isCarousel = React.useRef(null)
-
+  const [index, setIndex] = React.useState(0);
+  const isCarousel = React.useRef(null);
 
   return (
     <View>
@@ -23,12 +21,8 @@ const CarouselCards = () => {
         onSnapToItem={(index) => setIndex(index)}
         useScrollView={true}
       />
-      
     </View>
+  );
+};
 
-  )
-}
-
-
-
-export default CarouselCards
+export default CarouselCards;

@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native';
+import React from 'react';
 
 const Portfolio = () => {
   return (
@@ -7,5 +7,5 @@ const Portfolio = () => {
       <Text>portfolio</Text>
     </View>
   );
-}
-export default Portfolio
+};
+export default Portfolio;

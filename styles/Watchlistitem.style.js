@@ -1,11 +1,11 @@
-export default{
-    container: {
+export default {
+  container: {
     backgroundColor: 'white',
     borderRadius: 10,
     width: ITEM_WIDTH,
-    height:99.5625,
+    height: 99.5625,
     paddingBottom: 40,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 3,
@@ -17,34 +17,33 @@ export default{
   imageBackground: {
     width: ITEM_WIDTH,
     height: 150,
-    borderRadius:10
+    borderRadius: 10,
   },
   header: {
-    color: "#222",
+    color: '#222',
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     paddingLeft: 20,
-    paddingTop: 2
+    paddingTop: 2,
   },
   body: {
-    color: "#222",
+    color: '#222',
     fontSize: 10,
     paddingLeft: 20,
     //paddingLeft: 20,
     //paddingRight: 20,
-    left:-15,
-    right:-15,
-    fontWeight: "bold"
+    left: -15,
+    right: -15,
+    fontWeight: 'bold',
   },
-   watchlist: {
-    color: "#222",
+  watchlist: {
+    color: '#222',
     fontSize: 10,
     paddingLeft: 20,
     //paddingLeft: 20,
     //paddingRight: 20,
-    left:-15,
-    right:-15,
-    fontWeight: "bold"
-  }
-   
-}
+    left: -15,
+    right: -15,
+    fontWeight: 'bold',
+  },
+};
