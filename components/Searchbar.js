@@ -7,7 +7,6 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Image } from 'react-native';
 
 const Searchbar = (props) => {
@@ -44,14 +43,6 @@ const Searchbar = (props) => {
   );
 };
 
-Searchbar.propType = {
-  onChangeText: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  loading: PropTypes.bool.isRequired,
-  editing: PropTypes.bool.isRequired,
-  onClear: PropTypes.func.isRequired,
-};
 const styles = StyleSheet.create({
   searchBar: {
     flex: 1,
