@@ -1,13 +1,13 @@
 import { View, Text,Image } from 'react-native'
 import React from 'react'
-import imagepath from './imagePath'
 
-const profilephoto = () => {
+
+const Profilephoto = () => {
   return (
     <View style={{flex:1,alignContent:'center',alignItems:'center',justifyContent:'center'}}>
-      <Image source={imagepath.icProfile}></Image>
+      <Image source={require("../assets/profileImage/profile.png")}></Image>
     </View>
   )
 }
 
-export default profilephoto
+export default Profilephoto

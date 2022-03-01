@@ -1,32 +1,29 @@
 import { View, Text , Image,TouchableOpacity,StyleSheet,Dimensions} from 'react-native';
 import React from 'react';
-import imagepath from './imagePath';
 import {useNavigation} from '@react-navigation/native';
-import EditProfile from './EditProfile';
-import * as Font from 'expo-font';
 import { Ionicons } from "@expo/vector-icons";
 
 
 export const SLIDER_WIDTH = Dimensions.get('window').width + 5
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 
-const profile = () => {
+const Profile = () => {
     const navigation = useNavigation();
   return (
     <><View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 20, paddingRight: 20, paddingTop: 50 }}>
-          <TouchableOpacity activeOpacity={1} onPress={() => navigation.push('Bottom')}>
+          <TouchableOpacity activeOpacity={1} onPress={() => navigation.push('Appbar')}>
               <Image
-                  source={imagepath.icBack} /></TouchableOpacity>
+                  source={require("../assets/profileImage/back.png")} /></TouchableOpacity>
           <TouchableOpacity activeOpacity={1} onPress={() => navigation.push('Editprofile')}>
               <Image
-                  source={imagepath.icEdit} /></TouchableOpacity>
+                  source={require("../assets/profileImage/edit.png")} /></TouchableOpacity>
       </View>
       <View style={{flex:1,flexDirection:'row',justifyContent:'center',paddingLeft: 20, paddingRight: 20,top:-30}}>
           <View style={styles.profilecontainer}>
           <TouchableOpacity activeOpacity={1} onPress={() =>
                   navigation.push('Profilephoto')}>
               <Image style={{ borderColor: '#DF71A0', borderWidth: 6, borderRadius: 100, height: 150, width: 150}}
-                  source={imagepath.icProfile} /></TouchableOpacity></View>
+                  source={require("../assets/profileImage/profile.png")} /></TouchableOpacity></View>
       </View> 
       <View style={{flex:1,flexDirection:'column',justifyContent:'center',paddingLeft: 20, paddingRight: 20,top:-40,alignContent:'center',alignItems:'center',fontSize:35}}>
           <Text style={{fontSize:35,color:'#383838',fontWeight:'700'}}>jenna d,soz</Text>
@@ -175,4 +172,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default profile
+export default Profile

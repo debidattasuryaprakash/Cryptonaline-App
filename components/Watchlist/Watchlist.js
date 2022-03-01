@@ -1,22 +1,10 @@
 import {React,useState} from 'react';
-import { View, Text, StyleSheet, Dimensions, Image,Linking,TouchableOpacity,Button, ListViewComponent} from "react-native";
-
-import { Ionicons } from "@expo/vector-icons";
-import { Pressable } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Viewall from '../../screens/viewall';
+import { View, Text, StyleSheet, Dimensions, Image,TouchableOpacity} from "react-native";
 import {useNavigation} from '@react-navigation/native';
-import imagepath from './imagepath';
-
-
-
 
 export const SLIDER_WIDTH = Dimensions.get('window').width + 110
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 
-
- 
-  //const [bookmarked, setBookmarked] = useState(false);
 const Watchlist = ({ item, index }) => {
   const navigation = useNavigation();
  
@@ -31,7 +19,7 @@ const Watchlist = ({ item, index }) => {
     <Text style={styles.viewall}  >View All</Text></TouchableOpacity></View>
     
     <View style={styles.container} key={index}>
-      <Image style={styles.image} source={imagepath.icBit}></Image>
+      <Image style={styles.image} source={require("../../assets/watchlistImage/bitcoin.png")}></Image>
          <View
   style={{
     borderBottomColor: '#ACA9A9',
@@ -41,7 +29,7 @@ const Watchlist = ({ item, index }) => {
     alignSelf:'center',
     top:-30,
     left:0,}}/>
-   <Image style={styles.image2} source={imagepath.icSol}></Image>
+   <Image style={styles.image2} source={require("../../assets/watchlistImage/solana.png")}></Image>
 
     </View>
  

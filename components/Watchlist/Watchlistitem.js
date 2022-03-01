@@ -1,18 +1,10 @@
 import {React,useState} from 'react';
 import { View, Text, StyleSheet, Dimensions, Image,Linking,TouchableOpacity} from "react-native";
 
-import { Ionicons } from "@expo/vector-icons";
-import { Pressable } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-
-
-
 export const SLIDER_WIDTH = Dimensions.get('window').width + 0
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 
 
- 
-  //const [bookmarked, setBookmarked] = useState(false);
 const Watchlistitem = ({ item, index }) => {
  
  
