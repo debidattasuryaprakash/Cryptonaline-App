@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import imagePath from './imagePath';
 import { useRef } from 'react';
 import Searchbar from '../search-bar/Searchbar';
-import Stories from '../stories/Stories';
+import Stories from './Stories';
 import CarouselCards from '../cardCarousel/CarouselCards';
 import Watchlist from './Watchlist/Watchlist';
 import Viewall from '../screens/viewall';
