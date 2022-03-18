@@ -27,6 +27,7 @@ const CarouselCardItem = ({ item, index }) => {
           alert('bookmarked');
         }}
       >
+        <Image style={styles.bookmarkCircle} source={require('../../assets/carouselImage/bookmarkCircle.png')}></Image>
         <Text>
           <Ionicons style={styles.bookmark} name="bookmark-outline" size={20} />
         </Text>
