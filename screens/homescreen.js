@@ -1,33 +1,45 @@
-import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
-import React from 'react';
+import { View, Text, TouchableOpacity, Image,ScrollView,SafeAreaView,StatusBar } from 'react-native';
+import React,{ Component } from 'react';
 import Searchbar from '../components/Searchbar';
-import Stories from '../components/Stories';
+import Stories from '../components/story/Stories';
 import Watchlist from '../components/Watchlist/Watchlist';
 import CarouselCards from '../components/Carousel/CarouselCards';
 import { useNavigation } from '@react-navigation/native';
 
-const Homescreen = () => {
+
+
+
+
+const Homescreen  = () => {
   const navigation = useNavigation();
+  
   //const screenHeight = Dimensions.get('window').height;
+
+    
   return (
     <>
-      {/* <View style={{flex:1, Height: "auto", maxHeight: screenHeight}}>
-        <ScrollView showsVerticalScrollIndicator={false} style={{margin:0}} contentContainerStyle={{flexGrow:1}} >    */}
+      <ScrollView
+      vertical={true}
+      showsVerticalScrollIndicator={false}
+      style={{paddingHorizontal: 0,height:100}}
+      contentContainerStyle={{ flexGrow: 1 }}
+      alwaysBounceVertical={true}>
+        <StatusBar backgroundColor='black' barStyle="light-content" />
+
 
       <View
         style={{
+          flex:1,
           flexDirection: 'row',
           justifyContent: 'space-evenly',
           alignItems: 'center',
           paddingLeft: 0,
-          paddingTop: 50,
-        }}
-      >
-        <Searchbar />
-        <TouchableOpacity
+          paddingTop: 0,
+      }}>
+      <Searchbar />
+      <TouchableOpacity
           activeOpacity={1}
-          onPress={() => navigation.push('Profile')}
-        >
+          onPress={() => navigation.push('Profile')}>
           <Image
             style={{
               borderColor: '#11bbcc',
@@ -43,9 +55,9 @@ const Homescreen = () => {
       </View>
 
       <View
-        style={{ flexDirection: 'column', paddingTop: 10, left: -5, top: -20 }}
+        style={{ flex:1,flexDirection: 'column', paddingTop: 10, left: 0, top: -40 ,}}
       >
-        <Stories />
+        <Stories></Stories>
         <View
           style={{
             borderBottomColor: '#ACA9A9',
@@ -53,37 +65,22 @@ const Homescreen = () => {
             borderRadius: 50,
             width: 300,
             alignSelf: 'center',
-            top: 10,
-            left: 7,
+            top: -80,
+            left: -5,
           }}
         />
+      
       </View>
-      <View
-        style={{
-          flexDirection: 'column',
-          flex: 1,
-          alignItems: 'center',
-          top: 30,
-        }}
-      >
-        <CarouselCards />
-      </View>
-
-      {/* <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' ,top:-80}}>
-
-        <Text>Home Screen</Text>
-
-      </View>  */}
-      <View style={{ top: -150 }}>
+      <SafeAreaView
+        style={{flex:1,top: -100}}>
+      <CarouselCards />
+      </SafeAreaView>
+      <View style={{flex:1,top:-100}}>
         <Watchlist></Watchlist>
       </View>
-
-      {/* <View style={{ flex: 2,top:0}}>
-      <Interestroute></Interestroute></View>  */}
-
-      {/* </ScrollView>  
-       </View>  */}
-    </>
+  </ScrollView>
+       </>
+    
   );
 };
 

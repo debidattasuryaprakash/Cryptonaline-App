@@ -59,6 +59,19 @@ export default {
 
     //color: "black"
   },
+   bookmarkCircle: {
+    margin: 0,
+    position: 'absolute',
+    top: -3.5,
+    left: -5.25,
+    paddingRight: 3,
+    width: 30,
+    height: 30,
+    tintColor:"transparent"
+    
+
+    //color: "black"
+  },
   opacitybookmark: {
     margin: 5,
     position: 'absolute',
