@@ -8,8 +8,6 @@ import Bookmark from '../screens/Bookmark';
 import Portfolio from '../screens/Portfolio';
 import Stats from '../screens/Stats';
 
-
-
 const Appbar = () => {
   const Tab = createBottomTabNavigator();
 
@@ -24,13 +22,11 @@ const Appbar = () => {
         tabBarHideOnKeyboard: true,
         tabBarStyle: styles.tabbarstyle,
       }}
-
     >
       <Tab.Screen
         name="Home"
         component={HomeScreen}
         options={{
-          
           tabBarIcon: ({ focused }) => {
             return (
               <>

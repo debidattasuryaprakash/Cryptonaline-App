@@ -1,4 +1,4 @@
-import {Dimensions} from 'react-native'
+import { Dimensions } from 'react-native';
 export const SLIDER_WIDTH = Dimensions.get('window').width + 5;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
 
@@ -59,7 +59,7 @@ export default {
 
     //color: "black"
   },
-   bookmarkCircle: {
+  bookmarkCircle: {
     margin: 0,
     position: 'absolute',
     top: -3.5,
@@ -67,8 +67,7 @@ export default {
     paddingRight: 3,
     width: 30,
     height: 30,
-    tintColor:"transparent"
-    
+    tintColor: 'transparent',
 
     //color: "black"
   },

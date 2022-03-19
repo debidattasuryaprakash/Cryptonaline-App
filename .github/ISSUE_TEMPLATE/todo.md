@@ -4,12 +4,12 @@ about: TODOs to complete
 title: 'TODO: '
 labels: ''
 assignees: ''
-
 ---
 
 # Your Title Here
 
-Tasks: 
+Tasks:
+
 - [ ] Mercury
 - [ ] Venus
 - [ ] Etc

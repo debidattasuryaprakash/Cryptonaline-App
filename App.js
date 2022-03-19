@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View,StatusBar } from 'react-native';
+import { StyleSheet, View, StatusBar } from 'react-native';
 import Stacks from './routes/stacks';
 import { LogBox } from 'react-native';
 
@@ -11,7 +11,6 @@ function App() {
     <View style={{ flex: 1 }}>
       <Stacks />
     </View>
- 
   );
 }
 
