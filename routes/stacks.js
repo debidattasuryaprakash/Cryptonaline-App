@@ -9,8 +9,7 @@ import Profile from '../screens/Profile';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Appbar from '../components/Appbar';
-import Status from '../components/story/Status'
-
+import Status from '../components/story/Status';
 
 const stacks = () => {
   const Stack = createNativeStackNavigator();
