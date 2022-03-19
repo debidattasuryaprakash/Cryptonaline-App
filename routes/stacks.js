@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import Editprofile from '../screens/EditProfile';
-import Faq from '../screens/Faq';
-import Termsncondition from '../screens/Termsncondition';
-import Profilephoto from '../components/Profilephoto';
-import Viewall from '../screens/Viewall';
+import Editprofile from '../screens/editProfile';
+import Faq from '../screens/faq';
+import Termsncondition from '../screens/termsncondition';
+import Profilephoto from '../components/profilephoto';
+import Viewall from '../screens/viewall';
 import Profile from '../screens/Profile';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
