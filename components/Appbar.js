@@ -2,11 +2,11 @@ import React from 'react';
 import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styles from '../styles/Appbar.style';
-import HomeScreen from '../screens/Homescreen';
-import News from '../screens/News';
-import Bookmark from '../screens/Bookmark';
-import Portfolio from '../screens/Portfolio';
-import Stats from '../screens/Stats';
+import HomeScreen from '../screens/homescreen';
+import News from '../screens/news';
+import Bookmark from '../screens/bookmark';
+import Portfolio from '../screens/portfolio';
+import Stats from '../screens/stats';
 
 
 
