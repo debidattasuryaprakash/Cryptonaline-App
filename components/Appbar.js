@@ -7,6 +7,7 @@ import News from '../screens/news';
 import Bookmark from '../screens/bookmark';
 import Portfolio from '../screens/portfolio';
 import Stats from '../screens/stats';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Appbar = () => {
   const Tab = createBottomTabNavigator();
@@ -30,20 +31,21 @@ const Appbar = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <>
-                <Image
+                <Ionicons
+                  name="home-outline"
                   style={{
-                    bottom: 0,
-                    tintColor: focused ? '#11bbcc' : '#a8a8a8',
+                    name: focused ? 'home' : 'home-outline',
+                    fontSize: 20,
+                    color: focused ? '#11bbcc' : '#a8a8a8',
                   }}
-                  source={require('../assets/navIcons/home.png')}
                 />
-                <Image
+                <Ionicons
+                  name="radio-button-on-outline"
                   style={{
-                    tintColor: focused ? '#11bbcc' : 'white',
-                    bottom: -5,
-                    width: focused ? 5 : 0,
+                    color: focused ? '#11bbcc' : 'white',
+                    bottom: -3,
+                    width: focused ? 12 : 0,
                   }}
-                  source={require('../assets/navIcons/Ellipse.png')}
                 />
               </>
             );
@@ -57,20 +59,21 @@ const Appbar = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <>
-                <Image
+                <Ionicons
+                  name="newspaper-outline"
                   style={{
-                    bottom: 0,
-                    tintColor: focused ? '#11bbcc' : '#a8a8a8',
+                    name: focused ? 'newspaper' : 'newspaper-outline',
+                    fontSize: 20,
+                    color: focused ? '#11bbcc' : '#a8a8a8',
                   }}
-                  source={require('../assets/navIcons/news.png')}
                 />
-                <Image
+                <Ionicons
+                  name="radio-button-on-outline"
                   style={{
-                    tintColor: focused ? '#11bbcc' : 'white',
-                    bottom: -5,
-                    width: focused ? 5 : 0,
+                    color: focused ? '#11bbcc' : 'white',
+                    bottom: -3,
+                    width: focused ? 12 : 0,
                   }}
-                  source={require('../assets/navIcons/Ellipse.png')}
                 />
               </>
             );
@@ -84,20 +87,21 @@ const Appbar = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <>
-                <Image
+                <Ionicons
+                  name="stats-chart-outline"
                   style={{
-                    bottom: 0,
-                    tintColor: focused ? '#11bbcc' : '#a8a8a8',
+                    name: focused ? 'stats-chart' : 'stats-chart-outline',
+                    fontSize: 20,
+                    color: focused ? '#11bbcc' : '#a8a8a8',
                   }}
-                  source={require('../assets/navIcons/stats.png')}
                 />
-                <Image
+                <Ionicons
+                  name="radio-button-on-outline"
                   style={{
-                    tintColor: focused ? '#11bbcc' : 'white',
-                    bottom: -5,
-                    width: focused ? 5 : 0,
+                    color: focused ? '#11bbcc' : 'white',
+                    bottom: -3,
+                    width: focused ? 12 : 0,
                   }}
-                  source={require('../assets/navIcons/Ellipse.png')}
                 />
               </>
             );
@@ -111,20 +115,21 @@ const Appbar = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <>
-                <Image
+                <Ionicons
+                  name="bookmarks-outline"
                   style={{
-                    bottom: 0,
-                    tintColor: focused ? '#11bbcc' : '#a8a8a8',
+                    name: focused ? 'bookmarks' : 'bookmarks-outline',
+                    fontSize: 20,
+                    color: focused ? '#11bbcc' : '#a8a8a8',
                   }}
-                  source={require('../assets/navIcons/bookmark.png')}
                 />
-                <Image
+                <Ionicons
+                  name="radio-button-on-outline"
                   style={{
-                    tintColor: focused ? '#11bbcc' : 'white',
-                    bottom: -5,
-                    width: focused ? 5 : 0,
+                    color: focused ? '#11bbcc' : 'white',
+                    bottom: -3,
+                    width: focused ? 12 : 0,
                   }}
-                  source={require('../assets/navIcons/Ellipse.png')}
                 />
               </>
             );
@@ -138,19 +143,21 @@ const Appbar = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <>
-                <Image
+                <Ionicons
+                  name="briefcase-outline"
                   style={{
-                    bottom: 0,
-                    tintColor: focused ? '#11bbcc' : '#a8a8a8',
+                    name: focused ? 'briefcase' : 'briefcase-outline',
+                    fontSize: 20,
+                    color: focused ? '#11bbcc' : '#a8a8a8',
                   }}
-                  source={require('../assets/navIcons/portfolio.png')}
                 />
-                <Image
+                <Ionicons
+                  name="radio-button-on-outline"
                   style={{
-                    width: focused ? 5 : 0,
-                    bottom: -5,
+                    color: focused ? '#11bbcc' : 'white',
+                    bottom: -3,
+                    width: focused ? 12 : 0,
                   }}
-                  source={require('../assets/navIcons/Ellipse.png')}
                 />
               </>
             );
