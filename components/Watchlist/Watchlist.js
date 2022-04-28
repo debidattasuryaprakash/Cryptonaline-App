@@ -23,7 +23,7 @@ const Watchlist = ({ item, index }) => {
           flexDirection: 'row',
           justifyContent: 'space-between',
           paddingLeft: 15,
-          paddingRight: 15,
+          paddingRight: 25,
           top: -12,
         }}
       >
