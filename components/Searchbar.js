@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 300,
+    width: 325,
     height: 50,
     alignSelf: 'center',
     marginTop: 5,
